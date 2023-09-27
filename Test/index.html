@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubik's Cube Solver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <canvas id="rubiksCanvas">
+        <script src="script.js"></script>
+        </canvas>
+        <div class="images-container">
+            <img src="img/droite.png" alt="Flèche de droite" id="arrowRight" onclick="right()">
+            <img src="img/gauche.png" alt="Flèche de gauche" id="arrowLeft" onclick="left()">
+            <img src="img/haut.png" alt="Flèche vers le haut" id="arrowUp" onclick="up()">
+            
+        </div>
+    </div>
+</body>
+</html>

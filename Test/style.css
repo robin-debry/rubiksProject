@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Empêche le défilement de la page */
+}
+
+.container {
+    position: relative;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+}
+
+.images-container {
+    position: absolute;
+    top: 500px;
+    left: 0;
+    z-index: 2;
+}
+img{
+    scale: 0.3;
+}
