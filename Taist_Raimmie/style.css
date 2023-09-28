@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: radial-gradient(circle, rgba(128, 128, 128, 1) 0%, rgba(33, 33, 33, 1) 100%);
+    width: 100vw;
+    height: 100vh;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.controls-container-bottom {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 150px - 10px);
+    z-index: 1;
+    width: 300px;
+    height: 100px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 20px 0 0;
+    background-color: rgba(255, 255, 255, 0.34);
+    border: 2px solid #fff;
+    border-bottom: none;
+}
+
+.controls-container-bottom > button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+.controls-container-bottom > button:hover {
+    background-color: #fff;
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.controls-container-bottom > button:nth-child(1), .controls-container-bottom > button:nth-child(3) {
+    margin-bottom: -30px;
+}
+
+.controls-container-bottom > button:nth-child(2) {
+    margin-bottom: 30px;
+}
+
+.controls-container-bottom > button > i {
+    font-size: 4em;
+    color: #000;
+}
+
+.controls-container-top {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 300px - 10px);
+    z-index: 1;
+    width: 700px;
+    height: 100px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 20px 20px;
+    background-color: rgba(255, 255, 255, 0.34);
+    border: 2px solid #fff;
+    border-top: none;
+}
+
+.controls-container-top > button {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    border: #fff 1px solid;
+    margin: 5px;
+}
+
+#edit-text {
+    width: 100px;
+    height: 50px;
+    margin: 5px;
+    margin-bottom: 50px;
+}
+
+#rotateFrontFace {
+    background-color: #00ff00;
+}
+
+#rotateBackFace {
+    background-color: #0000ff;
+}
+
+#rotateLeftFace {
+    background-color: #ffa500;
+}
+
+#rotateRightFace {
+    background-color: #ff0000;
+}
+
+#rotateTopFace {
+    background-color: #ffffff;
+}
+
+#rotateBottomFace {
+    background-color: #ffff00;
+}

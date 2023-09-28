@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubik's Cube Solver</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="rubiksCanvas"></canvas>
+
+    
+    
+    <div class="controls-container-top">
+        <div id="edit-text">
+            <input type="text" name="scrambleAlg" id="scrambleAlg" maxlength="100" placeholder="Scramble algorithm. Eg. F R2 U'" size="26">
+            <button id="Play">
+                <i class="fa-regular fa-play"></i>
+            </button>
+        </div>
+        <div id="inputScrambleError"></div>
+        <button id="rotateFrontFace"></button>
+        <button id="rotateBackFace"></button>
+        <button id="rotateLeftFace"></button>
+        <button id="rotateRightFace"></button>
+        <button id="rotateTopFace"></button>
+        <button id="rotateBottomFace"></button>
+    </div>
+    
+
+    <div class="controls-container-bottom">
+        <button id="rotateLeftButton">
+            <i class="fa-regular fa-circle-left"></i>
+        </button>
+        <button id="rotateUpButton">
+            <i class="fa-regular fa-circle-up"></i>
+        </button>
+        <button id="rotateRightButton">
+            <i class="fa-regular fa-circle-right"></i>
+        </button>
+    </div>
+
+    
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+
+</html>
