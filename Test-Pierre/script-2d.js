@@ -31,6 +31,14 @@ var cubeletPlacement = {
     ]
 };
 
+function clearCube() {
+    cubeletPlacement = {"U": [{ id: "6", color: "white" }, { id: "14", color: "white" }, { id: "23", color: "white" },{ id: "7", color: "white" }, { id: "15", color: "white" }, { id: "24", color: "white" },{ id: "8", color: "white" }, { id: "16", color: "white" }, { id: "25", color: "white" }],"L": [{ id: "6", color: "orange" }, { id: "7", color: "orange" }, { id: "8", color: "orange" },{ id: "3", color: "orange" }, { id: "4", color: "orange" }, { id: "5", color: "orange" },{ id: "0", color: "orange" }, { id: "1", color: "orange" }, { id: "2", color: "orange" }],"F": [{ id: "8", color: "green" }, { id: "16", color: "green" }, { id: "25", color: "green" },{ id: "5", color: "green" }, { id: "13", color: "green" }, { id: "22", color: "green" },{ id: "2", color: "green" }, { id: "11", color: "green" }, { id: "19", color: "green" }],"R": [{ id: "25", color: "red" }, { id: "24", color: "red" }, { id: "23", color: "red" },{ id: "22", color: "red" }, { id: "21", color: "red" }, { id: "20", color: "red" },{ id: "19", color: "red" }, { id: "18", color: "red" }, { id: "17", color: "red" }],"B": [{ id: "23", color: "blue" }, { id: "14", color: "blue" }, { id: "6", color: "blue" },{ id: "20", color: "blue" }, { id: "12", color: "blue" }, { id: "3", color: "blue" },{ id: "17", color: "blue" }, { id: "9", color: "blue" }, { id: "0", color: "blue" }],"D": [{ id: "2", color: "yellow" }, { id: "11", color: "yellow" }, { id: "19", color: "yellow" },{ id: "1", color: "yellow" }, { id: "10", color: "yellow" }, { id: "18", color: "yellow" },{ id: "0", color: "yellow" }, { id: "9", color: "yellow" }, { id: "17", color: "yellow" }]};
+
+    createAllFaceTables();
+}
+
+document.getElementById("reset-cube").addEventListener("click", clearCube);
+
 // Helper function to create a table for a face
 function createFaceTable(faceId) {
     const faceTable = document.getElementById(`face-${faceId}`);
@@ -81,7 +89,7 @@ function createAllFaceTables() {
 // Call the refactored function to create tables for all faces
 createAllFaceTables();
 
-document.getElementById("execute-move").addEventListener("click", executeMove);
+document.getElementById("complete-move").addEventListener("click", executeMove);
 
 function executeMove() {
     const inputElement = document.getElementById("algs-input");

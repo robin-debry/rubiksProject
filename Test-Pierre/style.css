@@ -9,18 +9,120 @@
     text-align: center;
 }
 
-.mid-row{
+.mid-row {
     display: flex;
 }
 
-.top-row, .bot-row{
+.top-row,
+.bot-row {
     margin-left: -198px;
 }
 
-.cube-2d-container{
+.cube-2d-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
+
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    height: 10vh;
+    background-color: #e8e8e8;
+}
+
+.title{
+    background-color: #bcbcbc;
+    height: 100%; 
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.algs-controls {
+    background-color: #858585;
+    height: 100%; 
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle-view-container {
+    background-color: #3f3f3f;
+    height: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.algs-controls>button {
+    width: 35px;
+    height: 35px;
+    margin: 3px;
+}
+
+.algs-controls>input {
+    width: 200px;
+    height: 35px;
+    margin: 3px;
+}
+
+.toggle-view-container>input[type="checkbox"] {
+    margin: 0px 15px;
+}
+
+.switch {
+    position: relative;
+    height: 1.5rem !important;
+    width: 3rem !important;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 9999px;
+    background-color: rgba(100, 116, 139, 0.377);
+    transition: all .3s ease;
+}
+
+.switch:checked {
+    background-color: rgb(217, 118, 51);
+}
+
+.switch::before {
+    position: absolute;
+    content: "";
+    left: calc(1.5rem - 1.6rem);
+    top: calc(1.5rem - 1.6rem);
+    display: block;
+    height: 1.6rem;
+    width: 1.6rem;
+    cursor: pointer;
+    border: 1px solid rgba(100, 116, 139, 0.527);
+    border-radius: 9999px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 3px 10px rgba(100, 116, 139, 0.327);
+    transition: all .3s ease;
+}
+
+.switch:hover::before {
+    box-shadow: 0 0 0px 8px rgba(0, 0, 0, .15)
+}
+
+.switch:checked:hover::before {
+    box-shadow: 0 0 0px 8px rgba(236, 72, 153, .15)
+}
+
+.switch:checked:before {
+    transform: translateX(100%);
+    border-color: rgba(236, 72, 153, 1);
 }
