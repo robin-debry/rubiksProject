@@ -1,0 +1,241 @@
+var cubeletPlacement = {
+    "U": [
+        { id: "6", color: "white" }, { id: "14", color: "white" }, { id: "23", color: "white" },
+        { id: "7", color: "white" }, { id: "15", color: "white" }, { id: "24", color: "white" },
+        { id: "8", color: "white" }, { id: "16", color: "white" }, { id: "25", color: "white" }
+    ],
+    "L": [
+        { id: "6", color: "orange" }, { id: "7", color: "orange" }, { id: "8", color: "orange" },
+        { id: "3", color: "orange" }, { id: "4", color: "orange" }, { id: "5", color: "orange" },
+        { id: "0", color: "orange" }, { id: "1", color: "orange" }, { id: "2", color: "orange" }
+    ],
+    "F": [
+        { id: "8", color: "green" }, { id: "16", color: "green" }, { id: "25", color: "green" },
+        { id: "5", color: "green" }, { id: "13", color: "green" }, { id: "22", color: "green" },
+        { id: "2", color: "green" }, { id: "11", color: "green" }, { id: "19", color: "green" }
+    ],
+    "R": [
+        { id: "25", color: "red" }, { id: "24", color: "red" }, { id: "23", color: "red" },
+        { id: "22", color: "red" }, { id: "21", color: "red" }, { id: "20", color: "red" },
+        { id: "19", color: "red" }, { id: "18", color: "red" }, { id: "17", color: "red" }
+    ],
+    "B": [
+        { id: "23", color: "blue" }, { id: "14", color: "blue" }, { id: "6", color: "blue" },
+        { id: "20", color: "blue" }, { id: "12", color: "blue" }, { id: "3", color: "blue" },
+        { id: "17", color: "blue" }, { id: "9", color: "blue" }, { id: "0", color: "blue" }
+    ],
+    "D": [
+        { id: "2", color: "yellow" }, { id: "11", color: "yellow" }, { id: "19", color: "yellow" },
+        { id: "1", color: "yellow" }, { id: "10", color: "yellow" }, { id: "18", color: "yellow" },
+        { id: "0", color: "yellow" }, { id: "9", color: "yellow" }, { id: "17", color: "yellow" }
+    ]
+};
+
+
+// Cubelet 0: 
+// Front color= 	Transparent
+// Back color= 	cubeletPlacement[“B”][8]
+// Up color= 	    Transparent
+// Down color= 	cubeletPlacement[“D”][6]
+// Left color= 	cubeletPlacement[“L”][6]
+// Right color= 	Transparent
+
+// Cubelet1:
+// Front color= 	Transparent
+// Back color= 	Transparent
+// Up color= 	    Transparent
+// Down color= 	cubeletPlacement[“D”][3]
+// Left color= 	cubeletPlacement[“L”][7]
+// Right color= 	Transparent
+
+// Cubelet2:
+// Front color= 	cubeletPlacement[“F”][6]
+// Back color= 	Transparent
+// Up color= 	    Transparent
+// Down color= 	cubeletPlacement[“D”][0]
+// Left color= 	cubeletPlacement[“L”][8]
+// Right color= 	Transparent
+
+// Cubelet3:
+// Front color= 	Transparent
+// Back color= 	cubeletPlacement[“B”][5]
+// Up color= 	    Transparent
+// Down color= 	Transparent
+// Left color= 	cubeletPlacement[“L”][3]
+// Right color= 	Transparent
+
+// Cubelet4:
+// Front color= 	Transparent
+// Back color= 	Transparent
+// Up color= 	    Transparent
+// Down color= 	Transparent
+// Left color= 	cubeletPlacement[“L”][4]
+// Right color= 	Transparent
+
+// Cubelet5:
+// Front color= 	cubeletPlacement[“F”][3]
+// Back color= 	Transparent
+// Up color= 	    Transparent
+// Down color= 	Transparent
+// Left color= 	cubeletPlacement[“L”][5]
+// Right color= 	Transparent
+
+// Cubelet6:
+// Front color= 	Transparent
+// Back color= 	cubeletPlacement[“B”][2]
+// Up color= 	    cubeletPlacement[“U”][0]
+// Down color= 	Transparent
+// Left color= 	cubeletPlacement[“L”][0]
+// Right color= 	Transparent
+
+// Cubelet7:
+// Front color= 	Transparent
+// Back color= 	Transparent
+// Up color= 	    cubeletPlacement[“U”][3]
+// Down color= 	Transparent
+// Left color= 	cubeletPlacement[“L”][1]
+// Right color= 	Transparent
+
+// Cubelet8:
+// Front color= 	cubeletPlacement[“F”][0]
+// Back color= 	Transparent
+// Up color= 	    cubeletPlacement[“U”][6]
+// Down color= 	Transparent
+// Left color= 	cubeletPlacement[“L”][2]
+// Right color= 	Transparent
+
+// Cubelet9:
+// Front color= 	Transparent
+// Back color= 	cubeletPlacement[“B”][7]
+// Up color= 	    Transparent
+// Down color=    cubeletPlacement[“D”][7]
+// Left color= 	Transparent
+// Right color= 	Transparent
+
+// Cubelet10:
+// Front color= 	Transparent
+// Back color= 	Transparent
+// Up color= 	    Transparent
+// Down color= 	cubeletPlacement[“D”][4]
+// Left color= 	Transparent
+// Right color= 	Transparent
+
+// Cubelet11:
+// Front color= 	cubeletPlacement[“F”][7]
+// Back color= 	Transparent
+// Up color= 	    Transparent
+// Down color= 	cubeletPlacement[“D”][1]
+// Left color= 	Transparent
+// Right color= 	Transparent
+
+// Cubelet12:
+// Front color= 	Transparent
+// Back color= 	cubeletPlacement[“B”][4]
+// Up color= 	    Transparent
+// Down color= 	Transparent
+// Left color= 	Transparent
+// Right color= 	Transparent
+
+// Cubelet13:
+// Front color= 	cubeletPlacement[“F”][4]
+// Back color= 	Transparent
+// Up color= 	    Transparent
+// Down color= 	Transparent
+// Left color= 	Transparent
+// Right color= 	Transparent
+
+// Cubelet14:
+// Front color= 	Transparent
+// Back color= 	cubeletPlacement[“B”][1]
+// Up color= 	    cubeletPlacement[“U”][1]
+// Down color= 	Transparent
+// Left color= 	Transparent
+// Right color= 	Transparent
+
+// Cubelet15:
+// Front color= 	Transparent
+// Back color= 	Transparent
+// Up color= 	    cubeletPlacement[“U”][4]
+// Down color= 	Transparent
+// Left color= 	Transparent
+// Right color= 	Transparent
+
+// Cubelet16:
+// Front color= 	cubeletPlacement[“F”][1]
+// Back color= 	Transparent
+// Up color= 	    cubeletPlacement[“U”][7]
+// Down color= 	Transparent
+// Left color= 	Transparent
+// Right color= 	Transparent
+
+// Cubelet17:
+// Front color= 	Transparent
+// Back color= 	cubeletPlacement[“B”][6]
+// Up color= 	    Transparent
+// Down color= 	cubeletPlacement[“D”][8]
+// Left color= 	Transparent
+// Right color= 	cubeletPlacement[“R”][8]
+
+// Cubelet18:
+// Front color= 	Transparent
+// Back color= 	Transparent
+// Up color= 	    Transparent
+// Down color= 	cubeletPlacement[“D”][5]
+// Left color= 	Transparent
+// Right color= 	cubeletPlacement[“R”][7]
+
+// Cubelet19:
+// Front color= 	cubeletPlacement[“F”][8]
+// Back color= 	Transparent
+// Up color= 	    Transparent
+// Down color= 	cubeletPlacement[“D”][2]
+// Left color= 	Transparent
+// Right color= 	cubeletPlacement[“R”][6]
+
+// Cubelet20:
+// Front color= 	Transparent
+// Back color= 	cubeletPlacement[“B”][3]
+// Up color= 	    Transparent
+// Down color= 	Transparent
+// Left color= 	Transparent
+// Right color= 	cubeletPlacement[“R”][5]
+
+// Cubelet21:
+// Front color= 	Transparent
+// Back color= 	Transparent
+// Up color= 	    Transparent
+// Down color= 	Transparent
+// Left color= 	Transparent
+// Right color= 	cubeletPlacement[“R”][4]
+
+// Cubelet22:
+// Front color= 	cubeletPlacement[“F”][5]
+// Back color= 	Transparent
+// Up color= 	    Transparent
+// Down color= 	Transparent
+// Left color= 	Transparent
+// Right color= 	cubeletPlacement[“R”][3]
+
+// Cubelet23:
+// Front color= 	Transparent
+// Back color= 	cubeletPlacement[“B”][0]
+// Up color= 	    cubeletPlacement[“U”][2]
+// Down color= 	Transparent
+// Left color= 	Transparent
+// Right color= 	cubeletPlacement[“R”][2]
+
+// Cubelet24:
+// Front color= 	Transparent
+// Back color= 	Transparent
+// Up color= 	    cubeletPlacement[“U”][5]
+// Down color= 	Transparent
+// Left color= 	Transparent
+// Right color= 	cubeletPlacement[“R”][1]
+
+// Cubelet25:
+// Front color= 	cubeletPlacement[“F”][2]
+// Back color= 	Transparent
+// Up color= 	    cubeletPlacement[“U”][8]
+// Down color= 	Transparent
+// Left color= 	Transparent
+// Right color= 	cubeletPlacement[“R”][0]
