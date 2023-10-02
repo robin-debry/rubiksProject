@@ -12,5 +12,5 @@ checkbox.addEventListener('change', function() {
     }
 });
 
-view_2d.style.display = 'block';
-view_3d.style.display = 'none';
+view_2d.style.display = 'none';
+view_3d.style.display = 'block';

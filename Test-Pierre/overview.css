@@ -1,0 +1,70 @@
+.global-container {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 10vh auto 0 auto;
+    position: absolute;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    align-items: left;
+    width: 100%;
+}
+
+.not-finished {
+    filter: grayscale(1);
+}
+
+.rubik-ctn {
+    display: flex;
+    flex-direction: column;
+    width: 18px;
+    height: 18px;
+}
+
+.not-finished:hover {
+    transform: scale(1.5) !important;
+    filter: grayscale(0) !important;
+    border: 1px solid white;
+    z-index: 2;
+}
+
+.top-row, .mid-row, .bot-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.face {
+    width: 6px;
+    height: 6px;
+    margin: 0;
+    padding: 0;
+}
+
+.blue {
+    background-color: #1c5ffe;
+}
+
+.green {
+    background-color: #58d568;
+}
+
+.yellow {
+    background-color: #f2f215;
+}
+
+.red {
+    background-color: #ed3030;
+}
+
+.orange {
+    background-color: #e89e15;
+}
+
+.white {
+    background-color: #ffffff;
+}
+
