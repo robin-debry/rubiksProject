@@ -699,9 +699,9 @@ document.getElementById('play').addEventListener('click', function () {
     });
 });
 
-// Position the camera
-camera.position.set(3, 2, 3);
-camera.lookAt(0, 0, 0);
+//position camera
+
+
 
 // Start the animation loop
 animate();
