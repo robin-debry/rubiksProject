@@ -1,0 +1,542 @@
+{
+  "_01": {
+    "id_Y": "",
+    "id_X": "01",
+    "colors": "blue, red, blue, red, blue, green, blue, red, blue",
+    "algorithm": "x' F L2 R F' B U F' U"
+  },
+  "_02": {
+    "id_Y": "",
+    "id_X": "02",
+    "colors": "red, blue, red, blue, red, blue, red, blue, green",
+    "algorithm": "z' B R' L B' D2 U R' L"
+  },
+  "_03": {
+    "id_Y": "",
+    "id_X": "03",
+    "colors": "blue, red, blue, red, blue, green, blue, red, blue",
+    "algorithm": "x' F L2 R F' B U F' U"
+  },
+  "_04": {
+    "id_Y": "",
+    "id_X": "04",
+    "colors": "red, blue, red, red, blue, green, red, blue, red",
+    "algorithm": "x' F2 B D2 U2 B U"
+  },
+  "_05": {
+    "id_Y": "",
+    "id_X": "05",
+    "colors": "blue, red, blue, red, blue, green, blue, red, blue",
+    "algorithm": "x' F L2 R F' B U F' U"
+  },
+  "_06": {
+    "id_Y": "",
+    "id_X": "06",
+    "colors": "red, blue, red, red, green, red, red, blue, red",
+    "algorithm": "x R2 L2 F' B U"
+  },
+  "_07": {
+    "id_Y": "",
+    "id_X": "07",
+    "colors": "blue, red, blue, blue, green, red, green, blue, green",
+    "algorithm": "x D' F' D B2 U2 L2 R"
+  },
+  "_08": {
+    "id_Y": "",
+    "id_X": "08",
+    "colors": "red, green, blue, blue, green, orange, orange, blue, green",
+    "algorithm": "x F2 B R B2 R L U"
+  },
+  "_09": {
+    "id_Y": "",
+    "id_X": "09",
+    "colors": "green, red, green, blue, red, blue, red, green, red",
+    "algorithm": "z' B' U' D2 F2 R' F' L"
+  },
+  "_10": {
+    "id_Y": "",
+    "id_X": "10",
+    "colors": "red, blue, red, red, green, red, blue, red, blue",
+    "algorithm": "x F' D' R' U F' B2 R"
+  },
+  "_11": {
+    "id_Y": "",
+    "id_X": "11",
+    "colors": "red, blue, red, green, red, green, red, blue, red",
+    "algorithm": "z' L2 U' L' U F2 L2 F R"
+  },
+  "_12": {
+    "id_Y": "",
+    "id_X": "12",
+    "colors": "blue, red, blue, red, green, red, blue, red, blue",
+    "algorithm": "x B D' L' F' L2 R U B"
+  },
+  "_13": {
+    "id_Y": "",
+    "id_X": "13",
+    "colors": "red, blue, green, blue, red, blue, orange, green, red",
+    "algorithm": "z' R' U' F' D2 R L F U"
+  },
+  "_14": {
+    "id_Y": "",
+    "id_X": "14",
+    "colors": "blue, green, blue, green, blue, green, blue, orange, blue",
+    "algorithm": "x' B2 F R' L D R' L"
+  },
+  "_15": {
+    "id_Y": "",
+    "id_X": "15",
+    "colors": "green, green, green, blue, green, blue, green, orange, green",
+    "algorithm": "x B2 F R2 L2 B"
+  },
+  "_16": {
+    "id_Y": "",
+    "id_X": "16",
+    "colors": "blue, green, red, green, orange, blue, blue, green, red",
+    "algorithm": "z R' D' L B' F2 R' L2"
+  },
+  "_17": {
+    "id_Y": "",
+    "id_X": "17",
+    "colors": "red, red, red, orange, blue, red, red, red, red",
+    "algorithm": "x' U' D B F R' L U"
+  },
+  "_18": {
+    "id_Y": "",
+    "id_X": "18",
+    "colors": "red, red, blue, green, red, green, blue, red, red",
+    "algorithm": "z' U' D2 B U' L' D R"
+  },
+  "_19": {
+    "id_Y": "",
+    "id_X": "19",
+    "colors": "blue, blue, blue, red, green, blue, blue, red, blue",
+    "algorithm": "x U' L' F' R2 L2 B L"
+  },
+  "_20": {
+    "id_Y": "",
+    "id_X": "20",
+    "colors": "green, blue, blue, blue, orange, blue, green, blue, blue",
+    "algorithm": "z U' D R' F2 L B' F"
+  },
+  "_21": {
+    "id_Y": "",
+    "id_X": "21",
+    "colors": "green, blue, blue, red, blue, green, green, blue, red",
+    "algorithm": "x' B' R2 D B2 L D L"
+  },
+  "_22": {
+    "id_Y": "",
+    "id_X": "22",
+    "colors": "blue, red, blue, blue, orange, blue, blue, red, green",
+    "algorithm": "z R B2 R2 L F2 L'"
+  },
+  "_23": {
+    "id_Y": "",
+    "id_X": "23",
+    "colors": "orange, blue, red, red, blue, green, blue, red, blue",
+    "algorithm": "x' D2 B L' U2 B U F"
+  },
+  "_24": {
+    "id_Y": "",
+    "id_X": "24",
+    "colors": "blue, orange, blue, blue, red, green, red, blue, red",
+    "algorithm": "z' U2 B D' B2 R F' L"
+  },
+  "_25": {
+    "id_Y": "",
+    "id_X": "25",
+    "colors": "blue, orange, blue, blue, blue, orange, orange, blue, orange",
+    "algorithm": "x' B' D2 U L2 B' L2"
+  },
+  "_26": {
+    "id_Y": "",
+    "id_X": "26",
+    "colors": "blue, blue, orange, blue, orange, blue, blue, blue, orange",
+    "algorithm": "z D' U F R' L F' B"
+  },
+  "_27": {
+    "id_Y": "",
+    "id_X": "27",
+    "colors": "blue, blue, orange, orange, blue, blue, blue, orange, blue",
+    "algorithm": "x' R' B' L' D' U' B F"
+  },
+  "_28": {
+    "id_Y": "",
+    "id_X": "28",
+    "colors": "blue, orange, blue, orange, blue, green, red, blue, red",
+    "algorithm": "x' B2 F2 U L B R2 L"
+  },
+  "_29": {
+    "id_Y": "",
+    "id_X": "29",
+    "colors": "red, blue, red, blue, orange, blue, blue, red, blue",
+    "algorithm": "z F2 L' D' R' D B L"
+  },
+  "_30": {
+    "id_Y": "",
+    "id_X": "30",
+    "colors": "blue, orange, blue, orange, blue, orange, red, blue, orange",
+    "algorithm": "x' F' R2 D' B' L2 F2 R"
+  },
+  "_31": {
+    "id_Y": "",
+    "id_X": "31",
+    "colors": "red, blue, orange, blue, orange, blue, blue, orange, blue",
+    "algorithm": "z L D' R' D B"
+  },
+  "_32": {
+    "id_Y": "",
+    "id_X": "32",
+    "colors": "blue, orange, blue, orange, blue, blue, orange, blue, orange",
+    "algorithm": "x' F D2 U R2 B' R2"
+  },
+  "_33": {
+    "id_Y": "",
+    "id_X": "33",
+    "colors": "orange, red, orange, blue, green, blue, blue, orange, blue",
+    "algorithm": "x F' U2 L2 F R2"
+  },
+  "_34": {
+    "id_Y": "",
+    "id_X": "34",
+    "colors": "orange, red, orange, orange, orange, blue, orange, red, orange",
+    "algorithm": "z R B2 F2 R2 L"
+  },
+  "_35": {
+    "id_Y": "",
+    "id_X": "35",
+    "colors": "blue, orange, blue, orange, blue, orange, blue, green, blue",
+    "algorithm": "x' B R2 L B' F U B'"
+  },
+  "_36": {
+    "id_Y": "",
+    "id_X": "36",
+    "colors": "orange, orange, orange, orange, blue, orange, orange, orange, orange",
+    "algorithm": "x' D' U' B' F R L"
+  },
+  "_37": {
+    "id_Y": "",
+    "id_X": "37",
+    "colors": "orange, orange, orange, blue, orange, blue, orange, orange, orange",
+    "algorithm": "z F' B D' U R' L"
+  },
+  "_38": {
+    "id_Y": "",
+    "id_X": "38",
+    "colors": "orange, blue, orange, orange, orange, blue, blue, orange, blue",
+    "algorithm": "z R' U' D2 F2 L F2 U"
+  },
+  "_39": {
+    "id_Y": "",
+    "id_X": "39",
+    "colors": "orange, blue, orange, orange, orange, blue, orange, blue, orange",
+    "algorithm": "z L' D' U F R' F' B"
+  },
+  "_40": {
+    "id_Y": "",
+    "id_X": "40",
+    "colors": "red, orange, red, orange, blue, orange, red, orange, red",
+    "algorithm": "x' B2 F2 D U F' B R L"
+  },
+  "_41": {
+    "id_Y": "",
+    "id_X": "41",
+    "colors": "orange, red, orange, blue, orange, blue, orange, red, orange",
+    "algorithm": "z L D2 U2 L2 B2 F2 L"
+  },
+  "_42": {
+    "id_Y": "",
+    "id_X": "42",
+    "colors": "red, orange, red, orange, blue, orange, red, orange, red",
+    "algorithm": "x' B2 F2 D U F' B R L"
+  },
+  "_43": {
+    "id_Y": "",
+    "id_X": "43",
+    "colors": "orange, red, orange, blue, orange, blue, orange, red, orange",
+    "algorithm": "z L D2 U2 L2 B2 F2 L"
+  },
+  "_44": {
+    "id_Y": "",
+    "id_X": "44",
+    "colors": "red, orange, red, orange, blue, orange, red, orange, red",
+    "algorithm": "x' B2 F2 D U F' B R L"
+  },
+  "_45": {
+    "id_Y": "",
+    "id_X": "45",
+    "colors": "orange, red, red, blue, orange, blue, red, red, orange",
+    "algorithm": "z U2 F R U2 R2 B2 F"
+  },
+  "_46": {
+    "id_Y": "",
+    "id_X": "46",
+    "colors": "orange, red, red, red, blue, orange, red, orange, red",
+    "algorithm": "x' B' F' U B2 L2 F2 L2"
+  },
+  "_47": {
+    "id_Y": "",
+    "id_X": "47",
+    "colors": "orange, red, orange, blue, orange, blue, orange, red, orange",
+    "algorithm": "z L D2 U2 L2 B2 F2 L"
+  },
+  "_48": {
+    "id_Y": "",
+    "id_X": "48",
+    "colors": "blue, orange, red, orange, blue, orange, red, blue, orange",
+    "algorithm": "x' D2 U B' R U' R2 B"
+  },
+  "_49": {
+    "id_Y": "",
+    "id_X": "49",
+    "colors": "orange, red, orange, blue, orange, red, red, blue, orange",
+    "algorithm": "z F L U' B2 L F R2"
+  },
+  "_50": {
+    "id_Y": "",
+    "id_X": "50",
+    "colors": "orange, orange, orange, orange, red, orange, blue, orange, red",
+    "algorithm": "z' L2 B2 R2 F D F"
+  },
+  "_51": {
+    "id_Y": "",
+    "id_X": "51",
+    "colors": "orange, orange, orange, red, orange, red, orange, red, orange",
+    "algorithm": "z B2 F2 R2 B2 L2"
+  },
+  "_52": {
+    "id_Y": "",
+    "id_X": "52",
+    "colors": "orange, orange, red, orange, orange, orange, red, orange, red",
+    "algorithm": "z F2 R2 L F2 R U2 R"
+  },
+  "_53": {
+    "id_Y": "",
+    "id_X": "53",
+    "colors": "orange, red, red, red, orange, red, orange, red, orange",
+    "algorithm": "z R2 B' L2 F U2 F"
+  },
+  "_54": {
+    "id_Y": "",
+    "id_X": "54",
+    "colors": "red, red, red, orange, red, blue, red, orange, red",
+    "algorithm": "z' R2 B F U2 R' B' F"
+  },
+  "_55": {
+    "id_Y": "",
+    "id_X": "55",
+    "colors": "red, red, red, red, blue, red, orange, red, orange",
+    "algorithm": "x' F2 U' D B F R' L"
+  },
+  "_56": {
+    "id_Y": "",
+    "id_X": "56",
+    "colors": "red, red, red, blue, red, blue, red, red, red",
+    "algorithm": "z' F' B D' U R' L"
+  },
+  "_57": {
+    "id_Y": "",
+    "id_X": "57",
+    "colors": "red, red, blue, orange, red, red, blue, red, blue",
+    "algorithm": "z' R' U2 R F2 L2 F2"
+  },
+  "_58": {
+    "id_Y": "",
+    "id_X": "58",
+    "colors": "red, blue, red, orange, blue, orange, red, red, orange",
+    "algorithm": "x' D2 B' F U F2"
+  },
+  "_59": {
+    "id_Y": "",
+    "id_X": "59",
+    "colors": "red, red, blue, blue, orange, red, red, blue, red",
+    "algorithm": "z D F' L' F R2 B2 L2"
+  },
+  "_60": {
+    "id_Y": "",
+    "id_X": "60",
+    "colors": "red, red, red, blue, orange, blue, red, red, red",
+    "algorithm": "z L B2 F2 R2 D2 U2 L"
+  },
+  "_61": {
+    "id_Y": "",
+    "id_X": "61",
+    "colors": "red, blue, red, orange, blue, red, blue, red, blue",
+    "algorithm": "x' U2 F' D2 B' L U' F"
+  },
+  "_62": {
+    "id_Y": "",
+    "id_X": "62",
+    "colors": "blue, red, blue, blue, red, blue, red, blue, red",
+    "algorithm": "z' F' U F2 R' F' L"
+  },
+  "_63": {
+    "id_Y": "",
+    "id_X": "63",
+    "colors": "red, blue, red, red, blue, blue, blue, red, blue",
+    "algorithm": "x' F' D2 U R2 F' R2"
+  },
+  "_64": {
+    "id_Y": "",
+    "id_X": "64",
+    "colors": "blue, red, blue, red, blue, red, red, blue, red",
+    "algorithm": "x' U' D L' B R' L"
+  },
+  "_65": {
+    "id_Y": "",
+    "id_X": "65",
+    "colors": "red, blue, red, blue, red, blue, blue, red, blue",
+    "algorithm": "z' L' D' R' D B L"
+  },
+  "_66": {
+    "id_Y": "",
+    "id_X": "66",
+    "colors": "blue, red, blue, red, blue, red, red, blue, red",
+    "algorithm": "x' U' D L' B R' L"
+  },
+  "_67": {
+    "id_Y": "",
+    "id_X": "67",
+    "colors": "red, blue, orange, blue, red, blue, blue, orange, blue",
+    "algorithm": "z' F2 L D' R' D B"
+  },
+  "_68": {
+    "id_Y": "",
+    "id_X": "68",
+    "colors": "green, orange, blue, orange, green, orange, orange, blue, orange",
+    "algorithm": "x D' R2 U R B' R' L"
+  },
+  "_69": {
+    "id_Y": "",
+    "id_X": "69",
+    "colors": "orange, blue, orange, green, red, green, blue, orange, blue",
+    "algorithm": "z' D2 R' U' L2 F2 R2 D L"
+  },
+  "_70": {
+    "id_Y": "",
+    "id_X": "70",
+    "colors": "blue, green, blue, red, blue, red, green, blue, green",
+    "algorithm": "x' L' F2 D U B F U"
+  },
+  "_71": {
+    "id_Y": "",
+    "id_X": "71",
+    "colors": "green, blue, blue, blue, green, blue, blue, red, blue",
+    "algorithm": "x L' U' L' F' R2 B"
+  },
+  "_72": {
+    "id_Y": "",
+    "id_X": "72",
+    "colors": "green, blue, blue, red, blue, green, green, blue, blue",
+    "algorithm": "x' F' B R2 D B' F L"
+  },
+  "_73": {
+    "id_Y": "",
+    "id_X": "73",
+    "colors": "green, blue, blue, blue, green, blue, blue, blue, blue",
+    "algorithm": "x F' R2 F' B2 L2 F"
+  },
+  "_74": {
+    "id_Y": "",
+    "id_X": "74",
+    "colors": "blue, blue, blue, green, blue, green, blue, blue, blue",
+    "algorithm": "x' F2 R2 L2 F2"
+  },
+  "_75": {
+    "id_Y": "",
+    "id_X": "75",
+    "colors": "blue, blue, blue, blue, green, blue, blue, blue, blue",
+    "algorithm": "x R2 B2 F2 L2"
+  },
+  "_76": {
+    "id_Y": "",
+    "id_X": "76",
+    "colors": "blue, blue, blue, green, blue, green, blue, blue, blue",
+    "algorithm": "x' F2 R2 L2 F2"
+  },
+  "_77": {
+    "id_Y": "",
+    "id_X": "77",
+    "colors": "blue, blue, blue, blue, green, blue, blue, blue, blue",
+    "algorithm": "x R2 B2 F2 L2"
+  },
+  "_78": {
+    "id_Y": "",
+    "id_X": "78",
+    "colors": "blue, blue, blue, green, blue, green, blue, blue, blue",
+    "algorithm": "x' F2 R2 L2 F2"
+  },
+  "_79": {
+    "id_Y": "",
+    "id_X": "79",
+    "colors": "blue, blue, blue, blue, red, blue, blue, blue, blue",
+    "algorithm": "z' D' U' R' L B F"
+  },
+  "_80": {
+    "id_Y": "",
+    "id_X": "80",
+    "colors": "blue, blue, blue, green, blue, green, blue, blue, red",
+    "algorithm": "x' F L2 B' R2 F' B"
+  },
+  "_81": {
+    "id_Y": "",
+    "id_X": "81",
+    "colors": "blue, blue, blue, blue, red, blue, blue, blue, blue",
+    "algorithm": "z' D' U' R' L B F"
+  },
+  "_82": {
+    "id_Y": "",
+    "id_X": "82",
+    "colors": "blue, blue, blue, green, blue, green, blue, blue, red",
+    "algorithm": "x' F L2 B' R2 F' B"
+  },
+  "_83": {
+    "id_Y": "",
+    "id_X": "83",
+    "colors": "blue, green, blue, blue, red, blue, blue, blue, red",
+    "algorithm": "z' R U' R2 L F"
+  },
+  "_84": {
+    "id_Y": "",
+    "id_X": "84",
+    "colors": "blue, red, blue, green, blue, red, blue, green, blue",
+    "algorithm": "x' R2 L2 F' D' F' B R B"
+  },
+  "_85": {
+    "id_Y": "",
+    "id_X": "85",
+    "colors": "green, blue, red, blue, green, blue, red, blue, red",
+    "algorithm": "x L2 B R2 F2 D2 U2 F"
+  },
+  "_86": {
+    "id_Y": "",
+    "id_X": "86",
+    "colors": "blue, green, blue, red, blue, red, green, blue, green",
+    "algorithm": "x' L' F2 D U B F U"
+  },
+  "_87": {
+    "id_Y": "",
+    "id_X": "87",
+    "colors": "blue, green, blue, green, blue, red, blue, green, blue",
+    "algorithm": "x' B' F U B' F L2 R"
+  },
+  "_88": {
+    "id_Y": "",
+    "id_X": "88",
+    "colors": "blue, green, blue, blue, red, green, green, blue, blue",
+    "algorithm": "z' U' R U' L' R2 U L2"
+  },
+  "_89": {
+    "id_Y": "",
+    "id_X": "89",
+    "colors": "blue, green, blue, blue, red, green, green, blue, red",
+    "algorithm": "z' L2 U' R B' L B2 F"
+  },
+  "_90": {
+    "id_Y": "",
+    "id_X": "90",
+    "colors": "blue, green, blue, blue, red, green, blue, green, blue",
+    "algorithm": "z' D' U L' U2 B' F L2"
+  }
+}

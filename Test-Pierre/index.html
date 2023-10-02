@@ -1,43 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rubik's Cube Solver</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <canvas id="rubiksCanvas"></canvas>
+    <input type="text" id="algs-input">
+    <button id="execute-move">Execute Move</button>
 
-    <div class="controls-container-top">
-        <button id="rotateFrontFace"></button>
-        <button id="rotateBackFace"></button>
-        <button id="rotateLeftFace"></button>
-        <button id="rotateRightFace"></button>
-        <button id="rotateTopFace"></button>
-        <button id="rotateBottomFace"></button>
-    </div>
-    
+    <div class="cube-2d-container">
+        <div class="top-row">
+            <table id="face-U" class="cube-table">
+            </table>
+        </div>
 
-    <div class="controls-container-bottom">
-        <button id="rotateLeftButton">
-            <i class="fa-regular fa-circle-left"></i>
-        </button>
-        <button id="rotateUpButton">
-            <i class="fa-regular fa-circle-up"></i>
-        </button>
-        <button id="rotateRightButton">
-            <i class="fa-regular fa-circle-right"></i>
-        </button>
+        <div class="mid-row">
+            <table id="face-L" class="cube-table">
+            </table>
+
+            <table id="face-F" class="cube-table">
+            </table>
+
+            <table id="face-R" class="cube-table">
+            </table>
+
+            <table id="face-B" class="cube-table">
+            </table>
+        </div>
+
+        <div class="bot-row">
+            <table id="face-D" class="cube-table">
+            </table>
+        </div>
     </div>
+
+    <div id="cube-3d-container"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script-2d.js"></script>
+    <script src="script-3d.js"></script>
+
+
+
 </body>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="script.js"></script>
 
 </html>
