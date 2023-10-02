@@ -32,9 +32,10 @@ var cubeletPlacement = {
 };
 
 function clearCube() {
-    cubeletPlacement = {"U": [{ id: "6", color: "white" }, { id: "14", color: "white" }, { id: "23", color: "white" },{ id: "7", color: "white" }, { id: "15", color: "white" }, { id: "24", color: "white" },{ id: "8", color: "white" }, { id: "16", color: "white" }, { id: "25", color: "white" }],"L": [{ id: "6", color: "orange" }, { id: "7", color: "orange" }, { id: "8", color: "orange" },{ id: "3", color: "orange" }, { id: "4", color: "orange" }, { id: "5", color: "orange" },{ id: "0", color: "orange" }, { id: "1", color: "orange" }, { id: "2", color: "orange" }],"F": [{ id: "8", color: "green" }, { id: "16", color: "green" }, { id: "25", color: "green" },{ id: "5", color: "green" }, { id: "13", color: "green" }, { id: "22", color: "green" },{ id: "2", color: "green" }, { id: "11", color: "green" }, { id: "19", color: "green" }],"R": [{ id: "25", color: "red" }, { id: "24", color: "red" }, { id: "23", color: "red" },{ id: "22", color: "red" }, { id: "21", color: "red" }, { id: "20", color: "red" },{ id: "19", color: "red" }, { id: "18", color: "red" }, { id: "17", color: "red" }],"B": [{ id: "23", color: "blue" }, { id: "14", color: "blue" }, { id: "6", color: "blue" },{ id: "20", color: "blue" }, { id: "12", color: "blue" }, { id: "3", color: "blue" },{ id: "17", color: "blue" }, { id: "9", color: "blue" }, { id: "0", color: "blue" }],"D": [{ id: "2", color: "yellow" }, { id: "11", color: "yellow" }, { id: "19", color: "yellow" },{ id: "1", color: "yellow" }, { id: "10", color: "yellow" }, { id: "18", color: "yellow" },{ id: "0", color: "yellow" }, { id: "9", color: "yellow" }, { id: "17", color: "yellow" }]};
+    cubeletPlacement = { "U": [{ id: "6", color: "white" }, { id: "14", color: "white" }, { id: "23", color: "white" }, { id: "7", color: "white" }, { id: "15", color: "white" }, { id: "24", color: "white" }, { id: "8", color: "white" }, { id: "16", color: "white" }, { id: "25", color: "white" }], "L": [{ id: "6", color: "orange" }, { id: "7", color: "orange" }, { id: "8", color: "orange" }, { id: "3", color: "orange" }, { id: "4", color: "orange" }, { id: "5", color: "orange" }, { id: "0", color: "orange" }, { id: "1", color: "orange" }, { id: "2", color: "orange" }], "F": [{ id: "8", color: "green" }, { id: "16", color: "green" }, { id: "25", color: "green" }, { id: "5", color: "green" }, { id: "13", color: "green" }, { id: "22", color: "green" }, { id: "2", color: "green" }, { id: "11", color: "green" }, { id: "19", color: "green" }], "R": [{ id: "25", color: "red" }, { id: "24", color: "red" }, { id: "23", color: "red" }, { id: "22", color: "red" }, { id: "21", color: "red" }, { id: "20", color: "red" }, { id: "19", color: "red" }, { id: "18", color: "red" }, { id: "17", color: "red" }], "B": [{ id: "23", color: "blue" }, { id: "14", color: "blue" }, { id: "6", color: "blue" }, { id: "20", color: "blue" }, { id: "12", color: "blue" }, { id: "3", color: "blue" }, { id: "17", color: "blue" }, { id: "9", color: "blue" }, { id: "0", color: "blue" }], "D": [{ id: "2", color: "yellow" }, { id: "11", color: "yellow" }, { id: "19", color: "yellow" }, { id: "1", color: "yellow" }, { id: "10", color: "yellow" }, { id: "18", color: "yellow" }, { id: "0", color: "yellow" }, { id: "9", color: "yellow" }, { id: "17", color: "yellow" }] };
 
     createAllFaceTables();
+    update3dCube();
 }
 
 document.getElementById("reset-cube").addEventListener("click", clearCube);
@@ -241,6 +242,7 @@ function rotate(movement, parameter) {
             rotateZ();
         }
     }
+    update3dCube()
     createAllFaceTables();
 }
 
@@ -452,7 +454,7 @@ function rotateX() {
     cubeletPlacement["R"][6] = originalcubeData["R"][0];
     cubeletPlacement["R"][7] = originalcubeData["R"][3];
     cubeletPlacement["R"][8] = originalcubeData["R"][6];
-    
+
     //put the U face data into the F face
     cubeletPlacement["F"][0] = originalcubeData["U"][0];
     cubeletPlacement["F"][1] = originalcubeData["U"][1];
@@ -463,7 +465,7 @@ function rotateX() {
     cubeletPlacement["F"][6] = originalcubeData["U"][6];
     cubeletPlacement["F"][7] = originalcubeData["U"][7];
     cubeletPlacement["F"][8] = originalcubeData["U"][8];
-    
+
     // put the F face data into the D face 
     cubeletPlacement["D"][0] = originalcubeData["F"][0];
     cubeletPlacement["D"][1] = originalcubeData["F"][1];
@@ -510,7 +512,7 @@ function rotateY() {
     cubeletPlacement["U"][6] = originalcubeData["U"][0];
     cubeletPlacement["U"][7] = originalcubeData["U"][3];
     cubeletPlacement["U"][8] = originalcubeData["U"][6];
-    
+
     // Rotate the "D" face data
     cubeletPlacement["D"][0] = originalcubeData["D"][6];
     cubeletPlacement["D"][1] = originalcubeData["D"][3];
@@ -568,7 +570,7 @@ function rotateY() {
 
 function rotateZ() {
     const originalcubeData = JSON.parse(JSON.stringify(cubeletPlacement)); // Copy the original cube data
-    
+
     // Rotate the "F" face data
     cubeletPlacement["F"][0] = originalcubeData["F"][2];
     cubeletPlacement["F"][1] = originalcubeData["F"][5];
