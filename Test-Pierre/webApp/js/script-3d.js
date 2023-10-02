@@ -20,7 +20,7 @@ controls.enabled = true; // Disable controls altogether
 // Set additional options for the controls (optional)
 controls.enableDamping = true; // Enable damping for smoother camera movement
 controls.dampingFactor = 0.05; // Adjust damping factor as needed
-controls.rotateSpeed = 0.5; // Adjust rotate speed as needed
+controls.rotateSpeed = 0.8; // Adjust rotate speed as needed
 controls.zoomSpeed = 1.2; // Adjust zoom speed as needed
 
 function update3dCube() {
@@ -333,14 +333,9 @@ camera.lookAt(0, 1, 0); // Look at the center of the scene
 // Render the scene with your existing renderer and camera
 function animate() {
     requestAnimationFrame(animate);
-
-
     controls.update();
-
-
     renderer.render(scene, camera);
 }
 
 animate();
-
-update3dCube()
+update3dCube();

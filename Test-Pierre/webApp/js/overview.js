@@ -1,4 +1,4 @@
-fetch('convert/myJsonFile.json')
+fetch('../../convert/myJsonFile.json')
     .then(response => response.json())
     .then(data => {
         const container = document.querySelector('.global-container');
@@ -22,7 +22,7 @@ fetch('convert/myJsonFile.json')
             // Iterate through Rubik's cubes in the group
             groupedData[id_Y].forEach(item => {
                 const rubikLink = document.createElement('a');
-                rubikLink.href = `http://localhost:5500/Test-Pierre/index.html?alg=${item.algorithm}`;
+                rubikLink.href = `http://localhost:5500/Test-Pierre/WebApp/html/index.html?alg=${item.algorithm}`;
                 rubikLink.className = 'not-finished';
 
                 const rubikCtnDiv = document.createElement('div');

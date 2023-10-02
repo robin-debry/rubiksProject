@@ -635,31 +635,3 @@ function rotateZ() {
     cubeletPlacement["R"][7] = originalcubeData["D"][3];
     cubeletPlacement["R"][8] = originalcubeData["D"][6];
 }
-
-// F -> need to invert the rotation
-// F' 
-// F2
-// B ->
-// B'
-// B2
-// U
-// U'
-// U2
-// D
-// D'
-// D2
-// L
-// L'
-// L2
-// R
-// R'
-// R2
-// X
-// X'
-// X2
-// Y
-// Y'
-// Y2
-// Z
-// Z'
-// Z2
