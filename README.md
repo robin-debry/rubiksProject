@@ -46,8 +46,8 @@ The school has supplied us with a stock of Rubik’s cubes for constructing the 
 
 ## Documents link
 
-- [Functional Specification](/Team%201%20Functional%20Specification.pdf)
-- [Technical Specification](/)
+- [Functional Specification](/Team%201%20Functional%20Specification%20Rubik's%20art.pdf)
+- [Technical Specification](/Team%201%20Technical%20Specification%20Rubik's%20art.pdf)
 
 #### Retro Planning
 
