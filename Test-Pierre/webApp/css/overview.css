@@ -1,9 +1,18 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background: radial-gradient(circle, rgba(128,128,128,1) 0%, rgba(33,33,33,1) 100%);
+}
+
 .global-container {
-    margin-top: 10vh;
     display: flex;
     flex-direction: column-reverse;
-    margin: 10vh auto 0 auto;
-    position: absolute;
+    border: 10px solid rgb(126, 126, 126);
+    /* transform: skew(0deg, 30deg); */
 }
 
 .row {
@@ -12,25 +21,24 @@
     justify-content: baseline;
     align-items: left;
     width: 100%;
-}
-
-.not-finished {
-    filter: grayscale(1);
+    margin: 0;
 }
 
 .rubik-ctn {
     display: flex;
     flex-direction: column;
-    width: 18px;
-    height: 18px;
+}
+
+.not-finished {
+    transition: 0.5s;
 }
 
 .not-finished:hover {
-    transform: scale(1.5) !important;
-    filter: grayscale(0) !important;
-    border: 1px solid white;
+    transform: scale(1.7);
+    cursor: crosshair;
     z-index: 2;
 }
+
 
 .top-row, .mid-row, .bot-row {
     display: flex;
@@ -38,33 +46,41 @@
 }
 
 .face {
-    width: 6px;
-    height: 6px;
+    width: 5px;
+    height: 5px;
     margin: 0;
     padding: 0;
 }
 
+.not-finished:hover .face{
+    outline: 1px solid black;
+}
+
+.finished {
+    transition: 0.5s;
+}
+
 .blue {
-    background-color: #1c5ffe;
+    background-color: #0404fc;
 }
 
 .green {
-    background-color: #58d568;
+    background-color: #04fc04;
 }
 
 .yellow {
-    background-color: #f2f215;
+    background-color: #fcfc04;
 }
 
 .red {
-    background-color: #ed3030;
+    background-color: #fc0404;
 }
 
 .orange {
-    background-color: #e89e15;
+    background-color: #fc9b07;
 }
 
 .white {
-    background-color: #ffffff;
+    background-color: #fcfbfb;
 }
 

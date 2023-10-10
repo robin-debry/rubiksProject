@@ -7,9 +7,6 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setClearColor(0xffffff, 0);
 document.body.appendChild(renderer.domElement);
 
-// Create the orbit controls
-
-
 // Set the initial position for the controls
 controls.target.set(0, 0, 0);
 controls.enablePan = true; // Disable panning (i.e. right click + drag)
@@ -24,6 +21,74 @@ controls.rotateSpeed = 0.8; // Adjust rotate speed as needed
 controls.zoomSpeed = 1.2; // Adjust zoom speed as needed
 
 function update3dCube() {
+    var cubeletPosition = {
+        "F": [
+            { x: -1, y: 1, z: 1 },
+            { x: 0, y: 1, z: 1 },
+            { x: 1, y: 1, z: 1 },
+            { x: -1, y: 0, z: 1 },
+            { x: 0, y: 0, z: 1 },
+            { x: 1, y: 0, z: 1 },
+            { x: -1, y: -1, z: 1 },
+            { x: 0, y: -1, z: 1 },
+            { x: 1, y: -1, z: 1 }
+        ],
+        "B": [
+            { x: -1, y: 1, z: -1 },
+            { x: 0, y: 1, z: -1 },
+            { x: 1, y: 1, z: -1 },
+            { x: -1, y: 0, z: -1 },
+            { x: 0, y: 0, z: -1 },
+            { x: 1, y: 0, z: -1 },
+            { x: -1, y: -1, z: -1 },
+            { x: 0, y: -1, z: -1 },
+            { x: 1, y: -1, z: -1 }
+        ],
+        "U": [
+            { x: -1, y: 1, z: -1 },
+            { x: 0, y: 1, z: -1 },
+            { x: 1, y: 1, z: -1 },
+            { x: -1, y: 1, z: 0 },
+            { x: 0, y: 1, z: 0 },
+            { x: 1, y: 1, z: 0 },
+            { x: -1, y: 1, z: 1 },
+            { x: 0, y: 1, z: 1 },
+            { x: 1, y: 1, z: 1 }
+        ],
+        "D": [
+            { x: -1, y: -1, z: -1 },
+            { x: 0, y: -1, z: -1 },
+            { x: 1, y: -1, z: -1 },
+            { x: -1, y: -1, z: 0 },
+            { x: 0, y: -1, z: 0 },
+            { x: 1, y: -1, z: 0 },
+            { x: -1, y: -1, z: 1 },
+            { x: 0, y: -1, z: 1 },
+            { x: 1, y: -1, z: 1 }
+        ],
+        "L": [
+            { x: -1, y: 1, z: -1 },
+            { x: -1, y: 1, z: 0 },
+            { x: -1, y: 1, z: 1 },
+            { x: -1, y: 0, z: -1 },
+            { x: -1, y: 0, z: 0 },
+            { x: -1, y: 0, z: 1 },
+            { x: -1, y: 1, z: -1 },
+            { x: -1, y: 1, z: 0 },
+            { x: -1, y: 1, z: 1 }
+        ],
+        "R": [
+            { x: 1, y: 1, z: -1 },
+            { x: 1, y: 1, z: 0 },
+            { x: 1, y: 1, z: 1 },
+            { x: 1, y: 0, z: -1 },
+            { x: 1, y: 0, z: 0 },
+            { x: 1, y: 0, z: 1 },
+            { x: 1, y: 1, z: -1 },
+            { x: 1, y: 1, z: 0 },
+            { x: 1, y: 1, z: 1 }
+        ]
+    };
     var cubeletPlacement3D = {
         "0": {
             "Front color": "transparent",
@@ -262,7 +327,6 @@ function update3dCube() {
         }
     };
 
-
     function getColorHex(colorName) {
         switch (colorName) {
             case "red":
@@ -288,13 +352,10 @@ function update3dCube() {
     const cubeletSize = 1; // Adjust this value as needed
     const spacing = 0.01;
 
-    // clear all cubelets before adding new ones
-
     for (let i = scene.children.length - 1; i >= 0; i--) {
         const obj = scene.children[i];
         scene.remove(obj);
     }
-
 
     for (const cubeletID in cubeletPlacement3D) {
         const cubeletData = cubeletPlacement3D[cubeletID];
@@ -310,25 +371,165 @@ function update3dCube() {
             new THREE.MeshBasicMaterial({ color: getColorHex(cubeletData["Front color"]) }),
             new THREE.MeshBasicMaterial({ color: getColorHex(cubeletData["Back color"]) }),
         ];
-        const cubelet = new THREE.Mesh(cubeletGeometry, cubeletMaterials);
+        const cubeletMesh = new THREE.Mesh(cubeletGeometry, cubeletMaterials);
 
 
         // Position the cubelet
         const position = cubeletData["position"];
-        cubelet.position.set(position.x * (cubeletSize + spacing), position.y * (cubeletSize + spacing), position.z * (cubeletSize + spacing));
+        cubeletMesh.position.set(position.x * (cubeletSize + spacing), position.y * (cubeletSize + spacing), position.z * (cubeletSize + spacing));
 
         const edgesGeometry = new THREE.EdgesGeometry(cubeletGeometry);
         const edgesMaterial = new THREE.LineBasicMaterial({ color: 0x000000 });
         const edges = new THREE.LineSegments(edgesGeometry, edgesMaterial);
 
-        scene.add(cubelet);
+        scene.add(cubeletMesh);
         scene.add(edges);
     }
+
+
+}
+
+var cubeletPosition = {
+    "F": [
+        { x: -1, y: 1, z: 1 },
+        { x: 0, y: 1, z: 1 },
+        { x: 1, y: 1, z: 1 },
+        { x: -1, y: 0, z: 1 },
+        { x: 0, y: 0, z: 1 },
+        { x: 1, y: 0, z: 1 },
+        { x: -1, y: -1, z: 1 },
+        { x: 0, y: -1, z: 1 },
+        { x: 1, y: -1, z: 1 }
+    ],
+    "B": [  
+        { x: -1, y: 1, z: -1 },
+        { x: 0, y: 1, z: -1 },
+        { x: 1, y: 1, z: -1 },
+        { x: -1, y: 0, z: -1 },
+        { x: 0, y: 0, z: -1 },
+        { x: 1, y: 0, z: -1 },
+        { x: -1, y: -1, z: -1 },
+        { x: 0, y: -1, z: -1 },
+        { x: 1, y: -1, z: -1 }
+    ],
+    "U": [
+        { x: -1, y: 1, z: -1 },
+        { x: 0, y: 1, z: -1 },
+        { x: 1, y: 1, z: -1 },
+        { x: -1, y: 1, z: 0 },
+        { x: 0, y: 1, z: 0 },
+        { x: 1, y: 1, z: 0 },
+        { x: -1, y: 1, z: 1 },
+        { x: 0, y: 1, z: 1 },
+        { x: 1, y: 1, z: 1 }
+    ],
+    "D": [
+        { x: -1, y: -1, z: -1 },
+        { x: 0, y: -1, z: -1 },
+        { x: 1, y: -1, z: -1 },
+        { x: -1, y: -1, z: 0 },
+        { x: 0, y: -1, z: 0 },
+        { x: 1, y: -1, z: 0 },
+        { x: -1, y: -1, z: 1 },
+        { x: 0, y: -1, z: 1 },
+        { x: 1, y: -1, z: 1 }
+    ],
+    "L": [
+        { x: -1, y: 1, z: -1 },
+        { x: -1, y: 1, z: 0 },
+        { x: -1, y: 1, z: 1 },
+        { x: -1, y: 0, z: -1 },
+        { x: -1, y: 0, z: 0 },
+        { x: -1, y: 0, z: 1 },
+        { x: -1, y: 1, z: -1 },
+        { x: -1, y: 1, z: 0 },
+        { x: -1, y: 1, z: 1 }
+    ],
+    "R": [
+        { x: 1, y: 1, z: -1 },
+        { x: 1, y: 1, z: 0 },
+        { x: 1, y: 1, z: 1 },
+        { x: 1, y: 0, z: -1 },
+        { x: 1, y: 0, z: 0 },
+        { x: 1, y: 0, z: 1 },
+        { x: 1, y: 1, z: -1 },
+        { x: 1, y: 1, z: 0 },
+        { x: 1, y: 1, z: 1 }
+    ]
+};
+
+function rotation(face, direction) {
+    const faceCubelets = cubeletPosition[face];
+    const elementsToRemove = []; // Array to store elements for removal
+    const positionTolerance = 0.1; // Adjust this value as needed
+
+    // Find and attach the cubelets within tolerance
+    for (const cubelet of faceCubelets) {
+        scene.traverse(function (object) {
+            if (object instanceof THREE.Mesh) {
+                const cubeletPosition = object.position;
+                const withinTolerance = (
+                    Math.abs(cubeletPosition.x - cubelet.x) <= positionTolerance &&
+                    Math.abs(cubeletPosition.y - cubelet.y) <= positionTolerance &&
+                    Math.abs(cubeletPosition.z - cubelet.z) <= positionTolerance
+                );
+                if (withinTolerance) {
+                    elementsToRemove.push(object); // Save reference for removal
+                }
+            }
+        });
+    }
+
+    let rotationAxis;
+    if (face === "F" || face === "B") {
+        rotationAxis = new THREE.Vector3(0, 0, 1);
+    } else if (face === "U" || face === "D") {
+        rotationAxis = new THREE.Vector3(0, 1, 0);
+    } else if (face === "L" || face === "R") {
+        rotationAxis = new THREE.Vector3(1, 0, 0);
+    }
+
+    const angle = direction === "clockwise" ? Math.PI / 2 : -Math.PI / 2;
+    scene.updateMatrixWorld(); // Ensure the scene's matrix is updated
+    scene.rotateOnWorldAxis(rotationAxis, angle);
+
+    // Clean up and remove the elements saved for removal
+    for (const element of elementsToRemove) {
+        scene.remove(element);
+    }
+
+    update3dCube(); // Update the cube with the new positions
 }
 
 
+function findCubeletWithinTolerance(targetPosition, tolerance) {
+    for (const object of scene.children) {
+        if (object instanceof THREE.Mesh) {
+            const cubeletPosition = object.position;
+            const withinTolerance = (
+                Math.abs(cubeletPosition.x - targetPosition.x) <= tolerance &&
+                Math.abs(cubeletPosition.y - targetPosition.y) <= tolerance &&
+                Math.abs(cubeletPosition.z - targetPosition.z) <= tolerance
+            );
+
+            if (withinTolerance) {
+                return object;
+            }
+        }
+    }
+    return null; // No matching cubelet found
+}
+
 camera.position.set(4, 3, 4);
 camera.lookAt(0, 1, 0); // Look at the center of the scene
+
+function onWindowResize() {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
+window.addEventListener('resize', onWindowResize, false);
 
 // Render the scene with your existing renderer and camera
 function animate() {

@@ -22,7 +22,7 @@ fetch('../../convert/myJsonFile.json')
             // Iterate through Rubik's cubes in the group
             groupedData[id_Y].forEach(item => {
                 const rubikLink = document.createElement('a');
-                rubikLink.href = `http://localhost:5500/Test-Pierre/WebApp/html/index.html?alg=${item.algorithm}`;
+                rubikLink.href = `rubiks.html?alg=${item.algorithm}`;
                 rubikLink.className = 'not-finished';
 
                 const rubikCtnDiv = document.createElement('div');
@@ -65,14 +65,3 @@ fetch('../../convert/myJsonFile.json')
         }
     })
     .catch(error => console.error('Error loading JSON data:', error));
-
-
-    // rubikCtnDiv = document.querySelectorAll('.rubik-ctn');
-
-    // document.querySelector('.global-container').addEventListener('click', function() {
-    //     rubikCtnDiv.forEach(element => {
-    //         element.addEventListener('click', function() {
-    //             window.location.href = "http://localhost:5500/index.html?alg=" + element.getAttribute('alg');
-    //         });
-    //     });
-    // });

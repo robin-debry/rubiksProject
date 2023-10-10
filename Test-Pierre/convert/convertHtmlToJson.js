@@ -34,7 +34,8 @@ $('.row').each((index, row) => {
         id_Y: id_Y.toString(),
         id_X: id_X.toString(),
         colors: colors,
-        algorithm: cleanedAlgorithm
+        algorithm: cleanedAlgorithm,
+        done: false
     };
 
     // Increment id_X, and if it's a multiple of 90, increment id_Y and reset id_X to 1

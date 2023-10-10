@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="back-button">
+        <a href="complete_fresco.html">
+            <i class="fa-solid fa-circle-left"></i>
+        </a>
+    </div>
+
+    <div class="controls">
+        <button id="expand-controls" class="control-button">
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+        </button>
+
+        <button id="shrink-controls" class="control-button">
+            <i class="fa-solid fa-down-left-and-up-right-to-center"></i>
+        </button>
+
+        <button id="reset-cube" class="control-button">
+            <i class="fa-solid fa-trash"></i>
+        </button>
+    
+        <button id="step-backward" class="control-button">
+            <i class="fa-solid fa-backward-step"></i>
+        </button>
+    
+        <input type="text" id="algs-input" class="control-input">
+    
+        <button id="step-forward" class="control-button">
+            <i class="fa-solid fa-forward-step"></i>
+        </button>
+    
+        <button id="complete-move" class="control-button">
+            <i class="fa-solid fa-forward-fast"></i>
+        </button>
+    </div>
+
+    <div class="setting-container">
+        <i class="fa-solid fa-cubes"></i>
+        <div class="togle-view-container">
+            <span>2D View</span>
+                <input type="checkbox" name="" id="toggle-view" class="switch" checked="true">
+            <span>3D View</span>
+        </div>
+
+        <i class="fa-solid fa-street-view"></i>
+        <div class="togle-orbit-container">
+            <span>Orbit Off</span>
+                <input type="checkbox" name="" id="toggle-orbit" class="switch" checked="true">
+            <span>Orbit On</span>
+        </div>
+    </div>
+
+    <div class="view_2d">
+        <div class="cube-2d-container">
+            <div class="top-row">
+                <table id="face-U" class="cube-table">
+                </table>
+            </div>
+
+            <div class="mid-row">
+                <table id="face-L" class="cube-table">
+                </table>
+
+                <table id="face-F" class="cube-table">
+                </table>
+
+                <table id="face-R" class="cube-table">
+                </table>
+
+                <table id="face-B" class="cube-table">
+                </table>
+            </div>
+
+            <div class="bot-row">
+                <table id="face-D" class="cube-table">
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="view_3d">
+        <div id="cube-3d">
+        </div>
+    </div>
+   
+    <script src="../libs/Three.js"></script>
+    <script src="../libs/OrbitControl.js"></script>
+    <script src="../js/helper.js"></script>
+    <script src="../js/script-2d.js"></script>
+    <script src="../js/script-3d.js"></script>
+</body>
+</html>

@@ -31,15 +31,6 @@ var cubeletPlacement = {
     ]
 };
 
-function clearCube() {
-    cubeletPlacement = { "U": [{ id: "6", color: "white" }, { id: "14", color: "white" }, { id: "23", color: "white" }, { id: "7", color: "white" }, { id: "15", color: "white" }, { id: "24", color: "white" }, { id: "8", color: "white" }, { id: "16", color: "white" }, { id: "25", color: "white" }], "L": [{ id: "6", color: "orange" }, { id: "7", color: "orange" }, { id: "8", color: "orange" }, { id: "3", color: "orange" }, { id: "4", color: "orange" }, { id: "5", color: "orange" }, { id: "0", color: "orange" }, { id: "1", color: "orange" }, { id: "2", color: "orange" }], "F": [{ id: "8", color: "green" }, { id: "16", color: "green" }, { id: "25", color: "green" }, { id: "5", color: "green" }, { id: "13", color: "green" }, { id: "22", color: "green" }, { id: "2", color: "green" }, { id: "11", color: "green" }, { id: "19", color: "green" }], "R": [{ id: "25", color: "red" }, { id: "24", color: "red" }, { id: "23", color: "red" }, { id: "22", color: "red" }, { id: "21", color: "red" }, { id: "20", color: "red" }, { id: "19", color: "red" }, { id: "18", color: "red" }, { id: "17", color: "red" }], "B": [{ id: "23", color: "blue" }, { id: "14", color: "blue" }, { id: "6", color: "blue" }, { id: "20", color: "blue" }, { id: "12", color: "blue" }, { id: "3", color: "blue" }, { id: "17", color: "blue" }, { id: "9", color: "blue" }, { id: "0", color: "blue" }], "D": [{ id: "2", color: "yellow" }, { id: "11", color: "yellow" }, { id: "19", color: "yellow" }, { id: "1", color: "yellow" }, { id: "10", color: "yellow" }, { id: "18", color: "yellow" }, { id: "0", color: "yellow" }, { id: "9", color: "yellow" }, { id: "17", color: "yellow" }] };
-
-    createAllFaceTables();
-    update3dCube();
-}
-
-document.getElementById("reset-cube").addEventListener("click", clearCube);
-
 // Helper function to create a table for a face
 function createFaceTable(faceId) {
     const faceTable = document.getElementById(`face-${faceId}`);
@@ -87,32 +78,98 @@ function createAllFaceTables() {
     }
 }
 
+
 // Call the refactored function to create tables for all faces
 createAllFaceTables();
 
-document.getElementById("complete-move").addEventListener("click", executeMove);
+document.getElementById('reset-cube').addEventListener('click', clearCube);
+document.getElementById('step-forward').addEventListener('click', executeNextStep);
+document.getElementById('step-backward').addEventListener('click', executePreviousStep);
+document.getElementById('complete-move').addEventListener('click', executeCompleteAlgorithm);
 
-function executeMove() {
-    const inputElement = document.getElementById("algs-input");
-    const input = inputElement.value.toUpperCase().trim();
-    // const input = inputElement.value.trim();
+function clearCube() {
+    cubeletPlacement = { "U": [{ id: "6", color: "white" }, { id: "14", color: "white" }, { id: "23", color: "white" }, { id: "7", color: "white" }, { id: "15", color: "white" }, { id: "24", color: "white" }, { id: "8", color: "white" }, { id: "16", color: "white" }, { id: "25", color: "white" }], "L": [{ id: "6", color: "orange" }, { id: "7", color: "orange" }, { id: "8", color: "orange" }, { id: "3", color: "orange" }, { id: "4", color: "orange" }, { id: "5", color: "orange" }, { id: "0", color: "orange" }, { id: "1", color: "orange" }, { id: "2", color: "orange" }], "F": [{ id: "8", color: "green" }, { id: "16", color: "green" }, { id: "25", color: "green" }, { id: "5", color: "green" }, { id: "13", color: "green" }, { id: "22", color: "green" }, { id: "2", color: "green" }, { id: "11", color: "green" }, { id: "19", color: "green" }], "R": [{ id: "25", color: "red" }, { id: "24", color: "red" }, { id: "23", color: "red" }, { id: "22", color: "red" }, { id: "21", color: "red" }, { id: "20", color: "red" }, { id: "19", color: "red" }, { id: "18", color: "red" }, { id: "17", color: "red" }], "B": [{ id: "23", color: "blue" }, { id: "14", color: "blue" }, { id: "6", color: "blue" }, { id: "20", color: "blue" }, { id: "12", color: "blue" }, { id: "3", color: "blue" }, { id: "17", color: "blue" }, { id: "9", color: "blue" }, { id: "0", color: "blue" }], "D": [{ id: "2", color: "yellow" }, { id: "11", color: "yellow" }, { id: "19", color: "yellow" }, { id: "1", color: "yellow" }, { id: "10", color: "yellow" }, { id: "18", color: "yellow" }, { id: "0", color: "yellow" }, { id: "9", color: "yellow" }, { id: "17", color: "yellow" }] };
+    currentStep = 0;
 
-    if (input) {
-        const moves = input.split(/\s+/);
-        for (const move of moves) {
-            const movement = move[0];
-            const parameter = move[1];
-            if (parameter == undefined) {
-                rotate(movement, "");
-            } else if (parameter == "'" || parameter == "2") {
-                rotate(movement, parameter);
-            } else {
-                alert("Invalid input");
-            }
-        }
+    createAllFaceTables();
+    update3dCube();
+}
+
+// Add these variables at the beginning of your script
+
+let currentStep = 0;
+
+const inputElement = document.getElementById('algs-input');
+var input = inputElement.value.toUpperCase();
+var input = input.replace(/([A-Z])(2)/g, '$1 $1');
+const movesArray = input.split(' ');
+
+
+// Function to execute the next step of the algorithm
+function executeNextStep() {
+    if (currentStep < movesArray.length) {
+        const move = movesArray[currentStep];
+
+        // extract the movement and the parameter if there is one
+        const movement = move.slice(0, 1);
+        const parameter = move.slice(1);
+
+        rotate(movement, parameter);
+
+        currentStep++;
+        update3dCube();
+        createAllFaceTables();
     }
 }
 
+// Function to execute the previous step of the algorithm
+function executePreviousStep() {
+    if (currentStep > 0) {
+        currentStep--;
+        const move = movesArray[currentStep];
+
+        // extract the movement and the parameter if there is one
+        const movement = move.slice(0, 1);
+        const parameter = move.slice(1);
+
+        // do the opposite of the move
+        if (parameter == "") {
+            // rotate the face F one time in the counter-clockwise direction
+            rotate(movement, "'");
+        } else if (parameter == "'") {
+            // rotate the face F one time in the clockwise direction
+            rotate(movement, "");
+        } else if (parameter == "2") {
+            // rotate the face F two times in the counter-clockwise direction
+            rotate(movement, "2");
+        }
+    
+        update3dCube();
+        createAllFaceTables();
+    }
+}
+
+// Function to execute the complete algorithm and wait 1 second between each step
+function executeCompleteAlgorithm() {
+    clearCube();
+    const interval = setInterval(() => {
+        if (currentStep < movesArray.length) {
+            const move = movesArray[currentStep];
+
+            // extract the movement and the parameter if there is one
+            const movement = move.slice(0, 1);
+            const parameter = move.slice(1);
+
+            rotate(movement, parameter);
+
+            currentStep++;
+            update3dCube();
+            createAllFaceTables();
+        } else {
+            clearInterval(interval);
+        }
+    }, 500);
+}
 
 function rotate(movement, parameter) {
     if (movement == "F") {
@@ -122,10 +179,6 @@ function rotate(movement, parameter) {
         } else if (parameter == "'") {
             // rotate the face F one time in the counter-clockwise direction
             rotateF();
-            rotateF();
-            rotateF();
-        } else if (parameter == "2") {
-            // rotate the face F two times in the clockwise direction
             rotateF();
             rotateF();
         }
@@ -138,10 +191,6 @@ function rotate(movement, parameter) {
             rotateB();
             rotateB();
             rotateB();
-        } else if (parameter == "2") {
-            // rotate the face B two times in the clockwise direction
-            rotateB();
-            rotateB();
         }
     } else if (movement == "U") {
         if (parameter == "") {
@@ -150,10 +199,6 @@ function rotate(movement, parameter) {
         } else if (parameter == "'") {
             // rotate the face U one time in the counter-clockwise direction
             rotateU();
-            rotateU();
-            rotateU();
-        } else if (parameter == "2") {
-            // rotate the face U two times in the clockwise direction
             rotateU();
             rotateU();
         }
@@ -166,10 +211,6 @@ function rotate(movement, parameter) {
             rotateD();
             rotateD();
             rotateD();
-        } else if (parameter == "2") {
-            // rotate the face D two times in the clockwise direction
-            rotateD();
-            rotateD();
         }
     } else if (movement == "L") {
         if (parameter == "") {
@@ -178,10 +219,6 @@ function rotate(movement, parameter) {
         } else if (parameter == "'") {
             // rotate the face L one time in the counter-clockwise direction
             rotateL();
-            rotateL();
-            rotateL();
-        } else if (parameter == "2") {
-            // rotate the face L two times in the clockwise direction
             rotateL();
             rotateL();
         }
@@ -194,10 +231,6 @@ function rotate(movement, parameter) {
             rotateR();
             rotateR();
             rotateR();
-        } else if (parameter == "2") {
-            // rotate the face R two times in the clockwise direction
-            rotateR();
-            rotateR();
         }
     } else if (movement == "X") {
         if (parameter == "") {
@@ -207,10 +240,6 @@ function rotate(movement, parameter) {
             rotateX();
         } else if (parameter == "'") {
             // rotate the cube in the X axis one time in the counter-clockwise direction
-            rotateX();
-        } else if (parameter == "2") {
-            // rotate the cube in the X axis two times in the clockwise direction
-            rotateX();
             rotateX();
         }
     } else if (movement == "Y") {
@@ -222,10 +251,6 @@ function rotate(movement, parameter) {
         } else if (parameter == "'") {
             // rotate the cube in the Y axis one time in the counter-clockwise direction
             rotateY();
-        } else if (parameter == "2") {
-            // rotate the cube in the Y axis two times in the clockwise direction
-            rotateY();
-            rotateY();
         }
     } else if (movement == "Z") {
         if (parameter == "") {
@@ -235,10 +260,6 @@ function rotate(movement, parameter) {
             rotateZ();
         } else if (parameter == "'") {
             // rotate the cube in the Z axis one time in the counter-clockwise direction
-            rotateZ();
-        } else if (parameter == "2") {
-            // rotate the cube in the Z axis two times in the clockwise direction
-            rotateZ();
             rotateZ();
         }
     }

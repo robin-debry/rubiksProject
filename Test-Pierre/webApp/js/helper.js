@@ -31,3 +31,30 @@ checkbox2.addEventListener('change', function() {
         camera.lookAt(0, 1, 0);
     }
 });
+
+const controlsContainer = document.querySelector('.controls');
+const expandControls = document.querySelector('#expand-controls');
+const shrinkControls = document.querySelector('#shrink-controls');
+const resetCube = document.querySelector('#reset-cube');
+const stepBackward = document.querySelector('#step-backward');
+const algsInput = document.querySelector('#algs-input');
+const stepForward = document.querySelector('#step-forward');
+const completeMove = document.querySelector('#complete-move');
+
+expandControls.addEventListener('click', () => {
+    controlsContainer.classList.add('expand');
+    expandControls.style.display = 'none';
+    shrinkControls.style.display = 'block';
+    resetCube.style.display = 'block';
+    algsInput.style.display = 'block';
+    completeMove.style.display = 'block';
+});
+
+shrinkControls.addEventListener('click', () => {
+    controlsContainer.classList.remove('expand');
+    expandControls.style.display = 'block';
+    shrinkControls.style.display = 'none';
+    resetCube.style.display = 'none';
+    algsInput.style.display = 'none';
+    completeMove.style.display = 'none';
+});

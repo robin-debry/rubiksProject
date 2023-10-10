@@ -1,5 +1,10 @@
+body {background: radial-gradient(circle, rgba(167,167,167,1) 20%, rgba(107,107,107,1) 80%);
+    overflow: hidden;
+}
+
 .cube-table {
     border-collapse: collapse;
+    color: transparent;
 }
 
 .cube-table td {
@@ -31,69 +36,148 @@ body {
     margin: 0;
 }
 
-.header {
-    display: flex;
-    justify-content: center;
-    align-items: left;
-    height: 10vh;
-    background-color: #e8e8e8;
+.back-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75px;
+    height: 75px;
+    border-radius: 15%;
+    margin: 10px;
+    background: rgba( 255, 255, 255, 0.4 );
+    box-shadow: 0 8px 32px 0 rgba(89, 90, 105, 0.37);
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    transition: all 0.3s ease-in-out;
 }
 
-.title{
-    background-color: #bcbcbc;
-    height: 100%; 
-    width: 25%;
+.back-button:hover {
+    background: rgba( 255, 255, 255, 0.6 );
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border-radius: 40%;
+}
+
+.back-button > a {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #fff;
 }
 
-.algs-controls {
-    background-color: #858585;
-    height: 100%; 
-    width: 50%;
+.back-button > a > i {
+    font-size: 3rem;
+}
+
+.controls {
+    position: absolute;
     display: flex;
-    justify-content: center;
     align-items: center;
+    flex-direction: row;
+    bottom: 0;
+    left: calc(50% - 150px);
+    width: 300px;
+    height: 75px;
+    border-radius: 15px;
+    margin: 10px auto;
+    background: rgba( 255, 255, 255, 0.4 );
+    box-shadow: 0 8px 32px 0 rgba(89, 90, 105, 0.37);
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    transition: all 0.2s ease-in-out;
 }
 
-.settings-container {
-    height: 200%;
-    width: 25%;
+.controls.expand {
+    width: 700px;
+    height: 100px;
+    left: calc(50% - 350px);
+    justify-content: space-evenly;
+}
+
+.controls> button:nth-child(1) {
+    margin: 0 70px 0 30px;
+}
+
+.controls > button:nth-child(4) {
+    margin: 0 15px 0 0;
+}
+
+.control-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    font-size: 1.4rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.control-input {
+    width: 200px;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+#shrink-controls, #reset-cube, #algs-input, #complete-move {
+    display: none;
+}
+
+.setting-container {
+    position: absolute;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+
+    top: calc(40% - 150px);
+    right: 0;
+    width: 75px;
+    height: 200px;
+    border-radius: 15px;
+    margin: 10px;
+    background: rgba( 255, 255, 255, 0.4 );
+    box-shadow: 0 8px 32px 0 rgba(89, 90, 105, 0.37);
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    transition: all 0.2s ease-in-out;
 }
 
-.toggle-view-container {
-    background-color: #3f3f3f;
-    color: white;
-    height: 50%;
-    width: 100%;
+.setting-container > div {
+    display: none
+}
+
+.setting-container > i {
+    margin: 10px auto;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.setting-container:hover {
+    width: 250px;
+    right: 0;
+    justify-content: space-evenly;
+}
+
+.setting-container:hover i {
+    display: none;
+}
+
+.setting-container:hover > div {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
-}
-
-.toggle-orbit-container {
-    background-color: #443b3b;
-    color: white;
-    height: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.algs-controls>button {
-    width: 35px;
-    height: 35px;
-    margin: 3px;
-}
-
-.algs-controls>input {
-    width: 200px;
-    height: 35px;
-    margin: 3px;
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    color: #fff;
+    transition: all 0.5s ease-in-out;
 }
 
 .toggle-view-container>input[type="checkbox"], .toggle-orbit-container>input[type="checkbox"] {
