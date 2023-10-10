@@ -1,0 +1,260 @@
+body {
+    background: radial-gradient(circle, rgba(167,167,167,1) 20%, rgba(107,107,107,1) 80%);
+    overflow: hidden;
+}
+
+.cube-table {
+    border-collapse: collapse;
+    color: transparent;
+}
+
+.cube-table td {
+    border: 3px solid black;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+}
+
+.mid-row {
+    display: flex;
+}
+
+.top-row,
+.bot-row {
+    margin-left: -198px;
+}
+
+.cube-2d-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 75px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.back-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75px;
+    height: 75px;
+    border-radius: 15%;
+    margin: 10px;
+    background: rgba( 255, 255, 255, 0.4 );
+    box-shadow: 0 8px 32px 0 rgba(89, 90, 105, 0.37);
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    transition: all 0.3s ease-in-out;
+}
+
+.back-button:hover {
+    background: rgba( 255, 255, 255, 0.6 );
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border-radius: 40%;
+}
+
+.back-button > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #fff;
+}
+
+.back-button > a > i {
+    font-size: 3rem;
+}
+
+.done-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+.done-button > i {
+    font-size: 3.5rem;
+    color: #fff;
+    width: 85%;
+    height: 85%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.done-button > i:nth-child(1){
+    background: rgb(57, 151, 41);
+}
+
+.done-button > i:nth-child(2){
+    background: rgb(151, 41, 41);
+    display: none;
+}
+
+.controls {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    bottom: 0;
+    left: calc(50% - 150px);
+    width: 300px;
+    height: 75px;
+    border-radius: 15px;
+    margin: 10px auto;
+    background: rgba( 255, 255, 255, 0.4 );
+    box-shadow: 0 8px 32px 0 rgba(89, 90, 105, 0.37);
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    transition: all 0.2s ease-in-out;
+}
+
+.controls.expand {
+    width: 700px;
+    height: 100px;
+    left: calc(50% - 350px);
+    justify-content: space-evenly;
+}
+
+.controls> button:nth-child(1) {
+    margin: 0 70px 0 30px;
+}
+
+.controls > button:nth-child(4) {
+    margin: 0 15px 0 0;
+}
+
+.control-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    font-size: 1.4rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.control-input {
+    width: 200px;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+#shrink-controls, #reset-cube, #algs-input, #complete-move {
+    display: none;
+}
+
+.setting-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    top: calc(40% - 150px);
+    right: 0;
+    width: 75px;
+    height: 200px;
+    border-radius: 15px;
+    margin: 10px;
+    background: rgba( 255, 255, 255, 0.4 );
+    box-shadow: 0 8px 32px 0 rgba(89, 90, 105, 0.37);
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    transition: all 0.2s ease-in-out;
+}
+
+.setting-container > div {
+    display: none
+}
+
+.setting-container > i {
+    margin: 10px auto;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.setting-container:hover {
+    width: 250px;
+    right: 0;
+    justify-content: space-evenly;
+}
+
+.setting-container:hover i {
+    display: none;
+}
+
+.setting-container:hover > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+
+.toggle-view-container>input[type="checkbox"], .toggle-orbit-container>input[type="checkbox"] {
+    margin: 0px 15px;
+}
+
+.switch {
+    position: relative;
+    height: 1.5rem !important;
+    width: 3rem !important;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 9999px;
+    background-color: rgba(100, 116, 139, 0.377);
+    transition: all .3s ease;
+}
+
+.switch:checked {
+    background-color: rgb(217, 118, 51);
+}
+
+.switch::before {
+    position: absolute;
+    content: "";
+    left: calc(1.5rem - 1.6rem);
+    top: calc(1.5rem - 1.6rem);
+    display: block;
+    height: 1.6rem;
+    width: 1.6rem;
+    cursor: pointer;
+    border: 1px solid rgba(100, 116, 139, 0.527);
+    border-radius: 9999px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 3px 10px rgba(100, 116, 139, 0.327);
+    transition: all .3s ease;
+}
+
+.switch:hover::before {
+    box-shadow: 0 0 0px 8px rgba(0, 0, 0, .15)
+}
+
+.switch:checked:hover::before {
+    box-shadow: 0 0 0px 8px rgba(236, 72, 153, .15)
+}
+
+.switch:checked:before {
+    transform: translateX(100%);
+    border-color: rgba(236, 72, 153, 1);
+}
