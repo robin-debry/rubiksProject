@@ -58,16 +58,25 @@ The school has supplied us with a stock of Rubik’s cubes for constructing the 
   - [x] make three different frescos
   - [x] choose the fresco
   - [x] modify details
+  - [x] write the functional
 - 2nd week :
-  - [x] functional
+  - [x] send functional
   - [x] presentation of the fresco
   - [x] modify the fresco
+  - [x] find installations ideas for the fresco
+  - [x] write the technical
 - 3rd week :
-  - [x] technical
-  - [ ] 
+  - [x] send technical
+  - [x] build part number 5 of the fresco
+  - [x] Write week report 1
+  - [ ] send week report 1
 - 4th week :
   - [ ] start to build the fresco
+  - [ ] write week report 2
+  - [ ] send week report 2
 - 5th week :
   - [ ] finish to buils the fresco
   - [ ] control the fresco assembled
+  - [ ] write week report 3
   - [ ] final presentation
+  - [ ] send week report 3
