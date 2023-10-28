@@ -48,6 +48,9 @@ The school has supplied us with a stock of Rubik’s cubes for constructing the 
 
 - [Functional Specification](/Team%201%20Functional%20Specification%20Rubik's%20art.pdf)
 - [Technical Specification](/Team%201%20Technical%20Specification%20Rubik's%20art.pdf)
+- [weekly report week 3](/Team%201%20weekly%20report%20week%203.pdf)
+- [weekly report week 3+4](/Team%201%20weekly%20report%20week%203+4.pdf)
+- [weekly report week 3+4+5](/Team%201%20weekly%20report%20week%203+4+5.pdf)
 
 #### Retro Planning
 
@@ -69,14 +72,15 @@ The school has supplied us with a stock of Rubik’s cubes for constructing the 
   - [x] send technical
   - [x] build part number 5 of the fresco
   - [x] Write week report 1
-  - [ ] send week report 1
+  - [x] send week report 1
 - 4th week :
-  - [ ] start to build the fresco
-  - [ ] write week report 2
-  - [ ] send week report 2
+  - [x] start to build the fresco
+  - [x] write week report 2
+  - [x] send week report 2
 - 5th week :
-  - [ ] finish to buils the fresco
-  - [ ] control the fresco assembled
-  - [ ] write week report 3
-  - [ ] final presentation
-  - [ ] send week report 3
+  - [x] finish to buils the fresco
+  - [x] control the fresco assembled
+  - [x] put your name on the fresco
+  - [x] write week report 3
+  - [x] final presentation
+  - [x] send week report 3
